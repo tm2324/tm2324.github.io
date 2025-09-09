@@ -1,0 +1,166 @@
+@font-face {
+  font-family: "Convulse";
+  src:
+    local("ConvulseVF.ttf"),
+    url("./assets/ConvulseVF.ttf") format("truetype");
+}
+
+/*  style used to avoid animation on load */
+.preload {
+  transition: none!important;
+}
+
+/* black color fix  */
+.black {
+  filter: saturate(0%) brightness(0%);
+}
+
+/* white color fix  */
+.white {
+  filter: saturate(0%) brightness(100%);
+}
+
+.TMvar {
+  color: black;
+  font-family: 'Convulse', sans-serif;
+  font-variation-settings: 'wght' 2.0;
+  transition: font-variation-settings 0.5s ease;
+
+  font-size: 4em; /* Scales with viewport width */
+}
+
+.TMvar:hover {
+  font-variation-settings: 'wght' 1.0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  transition: all ease-in-out;
+}
+
+
+/* layout */
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: flex .3s ease-in-out;
+}
+
+.expanded-column {
+  flex: 4;
+}
+
+.box {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: flex .3s, background-color .3s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.box img {
+  width: 90%;
+}
+
+.expanded-box {
+  flex: 80;
+}
+
+
+/* project, name, X, and see more */
+
+.caption {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.caption {
+  position: absolute;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.X {
+  font-size: 2.6em;
+}
+
+.top {
+  top: 1em;
+}
+
+.btm {
+  bottom: 1.5em;
+}
+
+.left {
+  left: 1.5em;
+}
+
+.right {
+  right: 1em;
+}
+
+em {
+  font-family: "System Bold";
+  font-style: normal;
+}
+@media only screen and (max-width: 1200px) {
+  .caption{
+    font-size: 1em;
+  }
+  .box img {
+    width: 100%;
+  }
+}
+
+/* NOSCRIPT FAILSAFE */
+/* yes i know about the <noscript> tag,
+but that behaves differently if people
+turn off js locally instead of their
+browser and this method covers both
+while not interfering with the rest */
+
+ul {
+  height: 100vh;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+li {
+  height: 100%;
+  align-content: center;
+}
+
+.A { background-color: hsl(0, 0%, 100%);}
+.B { background-color: hsl(0, 0%,  97%);}
+.C { background-color: hsl(0, 0%,  94%);}
+.D { background-color: hsl(0, 0%,  91%);}
+
+#Ando:hover    { background-color: var(--Ando); }
+#Ben:hover     { background-color: var(--Ben); }
+#Betsy:hover   { background-color: var(--Betsy); }
+#Ceci:hover    { background-color: var(--Ceci); }
+#Fabio:hover   { background-color: var(--Fabio); }
+#Felix:hover   { background-color: var(--Felix); }
+#Hanna:hover   { background-color: var(--Hanna); }
+#Max:hover     { background-color: var(--Max); }
+#Miha:hover    { background-color: var(--Miha); }
+#Mint:hover    { background-color: var(--Mint); }
+#Nina:hover    { background-color: var(--Nina); }
+#Pauline:hover { background-color: var(--Pauline); }
+#Zhenya:hover  { background-color: var(--Zhenya); }
+#TM:hover      { background-color: var(--TM); }

@@ -1,0 +1,179 @@
+:root{
+    --bg_col: rgb(240, 240, 240);
+    --highlight_col: rgb(0, 0, 0);
+    --text_col: rgb(20, 20, 20);
+   }
+
+/* html elements -------------------------------------------------------------------------------- */
+
+header{
+  background-color: var(--Betsy);
+  background: #F56ED6;
+  background: linear-gradient(90deg, rgba(245, 110, 214, 1) 0%, rgba(92, 150, 240, 1) 43%, rgba(40, 201, 163, 1) 100%);}
+  /* UPDATE COLOR VAR*/
+
+
+body{
+    background-color: var(--bg_col);
+}
+
+img{
+    margin: 0 0;
+    display: block;
+    width: 100%;}
+
+p, ul{
+    margin: 0 0;
+    list-style-type: none;
+}
+
+nav a {
+    /* background-color: var(--Felix); /* UPDATE COLOR VAR*/ */
+    color: var(--text_col);
+}
+
+figcaption{
+  max-width: 740px;
+}
+
+header img{
+  width: 83%;
+}
+
+
+/* styling -------------------------------------------------------------------------------- */
+
+
+
+section .text{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding-bottom: 60px;
+}
+
+.top-row{
+    position: fixed;
+    /* background-color: var(--Felix); /* UPDATE COLOR VAR*/ */
+    color: var(--text_col);
+}
+
+.text {
+    padding-top: 72px;
+}
+
+.text h1{
+    font-family: "System";
+    position: sticky;
+    top: 48px;
+    z-index: 90;
+    /* background-color: black;
+    color: var(--Felix); /* UPDATE COLOR VAR*/ */
+    height: fit-content;
+    width: fit-content;
+    border-radius: 50px;
+    color: grey;
+}
+
+.text div{
+    grid-column: -11 / -2;
+    box-sizing: border-box;
+}
+
+/* text column one */
+.text p{ grid-column: -11 / span 5;}
+
+/* socials & links */
+.text ul{ grid-column: 9 / span 2;}
+
+/* images -------------------------------------------------------------------------------- */
+
+.text img{grid-column: 1 / span 12 ;}
+
+.double-image{
+ grid-column: 1 / -1;
+ display: flex;
+ flex-direction: row;
+}
+
+.double-image img{
+    width: 50%;
+}
+
+.image-container{
+    margin-top: 72px;
+    margin-bottom: 36px;
+}
+
+.zero-top{
+  margin-top: 0px;
+}
+
+
+/* break points -------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1200px) {
+
+  header img{
+    width: 100%;
+  }
+
+nav{
+  padding-left: 0px;
+  margin-left: 10px;
+
+  width: 120px;
+}
+.top-row{
+  position: absolute;
+}
+
+.text {
+    padding-top: 0;
+}
+
+.double-image{ flex-direction: column;}
+.double-image img{ width: 100%;}
+
+.text h1{
+  width: 92%;
+  border-top: 1px solid lightgrey;
+  padding-top: 30px;
+  position: relative;
+  border-radius: 0px;
+
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
+    top: 0px;
+    /* position: relative; */
+    /* top: 48px; */
+}
+/* socials on right */
+.text ul{
+    grid-row: 3 / span 1;
+    grid-column: 1 / -1;
+}
+
+/* text column one */
+.text p {
+    grid-row: 2 / span 1;
+    grid-column: 1/ -1;
+}
+
+.text>p+p {
+    grid-row: 4 / span 1;
+    grid-column: 1/ -1;
+}
+
+.text>.images {
+    grid-row: 5 / span 1;
+    grid-column: 1/ -1;
+}
+
+.text div{
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  grid-column: 1 / -1;
+}
+
+}
