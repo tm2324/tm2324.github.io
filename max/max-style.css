@@ -37,6 +37,11 @@ header img{
   width: 55vw;
 }
 
+lottie-player {
+    width: 73vw;
+    height: auto;
+}
+
 
 /* styling -------------------------------------------------------------------------------- */
 
@@ -114,6 +119,10 @@ section .text{
 
   header img{
     width: 90vw;
+  }
+  lottie-player {
+      width: 100vw;
+      height: auto;
   }
 
 nav{
