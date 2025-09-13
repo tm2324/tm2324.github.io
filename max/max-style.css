@@ -58,12 +58,11 @@ section .text{
     position: fixed;
     /* background-color: var(--Felix); /* UPDATE COLOR VAR*/ */
     color: var(--text_col)
-    color: #fff;
-    mix-blend-mode: exclusion;
+    color: #000;
 }
 
 .top-row *{
-  color: #fff;
+  color: #000;
 }
 .text {
     padding-top: 72px;
