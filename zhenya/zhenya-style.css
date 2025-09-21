@@ -11,8 +11,11 @@
 header{
   background-color: var(--Zhenya);
   overflow: hidden;
-    } /* UPDATE COLOR VAR*/
+} /* UPDATE COLOR VAR*/
 
+header img {
+  height: 100%;
+}
 
 body{
     background-color: var(--bg_col);
@@ -21,8 +24,7 @@ body{
 img{
     margin: 0 0;
     display: block;
-    /* width: 100%; */
-    height: 100%;
+    width: 100%;
 }
 
 p, ul{
