@@ -120,6 +120,7 @@ em {
   }
   .box img {
     width: 100%;
+    scale: 1.18;
   }
 }
 
