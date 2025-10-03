@@ -120,9 +120,15 @@ em {
   }
   .box img {
     width: 100%;
-    scale: 1.18;
+    scale: 1.05;
   }
 }
+@media only screen and (max-width: 770px) {
+  .box img {
+    scale: 1.2;
+  }
+}
+
 
 /* NOSCRIPT FAILSAFE */
 /* yes i know about the <noscript> tag,
